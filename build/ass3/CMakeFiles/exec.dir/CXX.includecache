@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/basaron/Documents/GitHub/EMBASS3/ass3/ApplicationModeSetting.h
+State.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/State.h
+
+/home/basaron/Documents/GitHub/EMBASS3/ass3/Setup.h
+stdlib.h
+-
+iostream
+-
+typeinfo
+-
+State.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/State.h
+ApplicationModeSetting.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/ApplicationModeSetting.h
+SimulateRealTime.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/SimulateRealTime.h
+
+/home/basaron/Documents/GitHub/EMBASS3/ass3/SimulateRealTime.h
+State.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/State.h
+
+/home/basaron/Documents/GitHub/EMBASS3/ass3/State.h
+iostream
+-
+typeinfo
+-
+
+/home/basaron/Documents/GitHub/EMBASS3/ass3/main.cpp
+Setup.h
+/home/basaron/Documents/GitHub/EMBASS3/ass3/Setup.h
+

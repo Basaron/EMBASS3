@@ -1,7 +1,37 @@
 #pragma once
-#include"State.h"
+
 #include <iostream>
 #include <typeinfo>
+
+
+class Context;
+
+class State {
+  /**
+   * @var Context
+   */
+ protected:
+  Context *context_;
+
+ public:
+  virtual ~State() {
+  }
+
+  void set_context(Context *context) {
+    this->context_ = context;
+  }
+
+  virtual void SelfTestOk(){}
+  virtual void Initailzed(){}
+  virtual void SelfTestFailed(){}
+  virtual void Restart(){}
+  virtual void Exit(){}
+
+  virtual void chMode(){}
+
+  virtual void RunRealTime(){}
+  virtual void Simulate(){}
+};
 
 class Context {
   /**
