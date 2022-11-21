@@ -1,34 +1,29 @@
 #pragma once
 
 #include "State.h"
+#include "Command.h"
 
-class Simulation : public State
+// creates the global SimCount counter
+int SimCount = 0;
+
+//Creates a Command Simulation
+class SimulationCommand : public Command
 {
-  public:
-    void RunRealTime() override;
+public:
+  void Execute() const override
+  {
+    std::cout << "    Command do Simulation\n";
+    SimCount++;
+    std::cout << "   " << SimCount << "\n";
+  }
 };
 
-class RealTimeExecution : public State
+//Creates a Command RealTimeExecution
+class RealTimeExecutionCommand : public Command
 {
-  public:
-    void Simulate() override;
+public:
+  void Execute() const override
+  {
+    std::cout << "Command do RealTimeExecution";
+  }
 };
-
-void Simulation::RunRealTime(){
-  std::cout << "RunRealTime to RealTimeExecution\n";
-  this->context_->TransitionTo(new RealTimeExecution);
-}
-
-void RealTimeExecution::Simulate(){
-  std::cout << "RealTimeExecution to RunRealTime\n";
-  this->context_->TransitionTo(new Simulation);
-}
-
-void SimulateRealTime()
-{
-  Context *context = new Context(new RealTimeExecution);
-  context->RequestSimulate();
-  context->RequestRunRealTime();
-  delete context;
-}
-

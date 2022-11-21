@@ -1,5 +1,7 @@
-#include"Setup.h"
+#include "Setup.h"
 
-int main(){
+// The main for runing the system
+int main()
+{
     Setup();
 }
